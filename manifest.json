@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	
+	"name": "(非公式) DAM★とも精密採点 拡張",
+	"version": "1.1.1",
+	"description": "DAM★とも精密採点の採点結果画面を拡張します",
+	"author": "Kerupani129",
+	
+	"content_scripts": [
+		{
+			"matches": ["http://www.clubdam.com/app/damtomo/karaokePost/StreamingKrk.do*"],
+			"js": [
+				"lib/jquery-2.1.4.min.js",
+				"lib/highcharts.js",
+				"lib/highcharts-more.js",
+				
+				"src/ParseUtils.js",
+				"src/StreamingKrk.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
